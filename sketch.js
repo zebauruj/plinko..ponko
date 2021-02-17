@@ -6,7 +6,7 @@ var particles = [];
 var plinkos = [];
 var divisions =[];
 var divisionHeight=300;
-var score =0;
+
 
 function setup() {
   createCanvas(500,800);
@@ -56,7 +56,7 @@ function draw() {
   }
   if(frameCount%60===0){
     particles.push(new Particle(random(width/2-30, width/2+30), 10,10));
-    score++;
+    
   }
 
  for (var j = 0; j < particles.length; j++) {
@@ -67,7 +67,7 @@ function draw() {
     
     divisions[k].display();
   }
-  fill("yellow");
-  text("Score:"+score,300,160);
+  
+  
   drawSprites();
 }
